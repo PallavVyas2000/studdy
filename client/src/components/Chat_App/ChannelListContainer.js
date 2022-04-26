@@ -13,7 +13,7 @@ const SideBar = () => (
         </div>
         <div className="channel-list__sidebar__icon2">
             <div className="icon2__inner">
-                <i class="bi bi-house-fill"></i>
+                <i className="bi bi-house-fill"></i>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@ const SideBar = () => (
 
 const AppHeader = () => (
     <div className="channel-list__header">
-        <p className="channel-list__header__text">Studdy Chat Room</p>
+        <p className="channel-list__header__text align-center">Studdy Chat Room</p>
     </div>
 )
 
@@ -31,6 +31,9 @@ const ChannelListContainer = () => {
         <SideBar/>
         <div className="channel-list__list__wrapper">
             <AppHeader/>
+            <ChannelSearch/>
+            <ChannelList filters={{}} channelRenderFilterFn={() => {}} List={(listProps) => (<TeamChannelList {...listProps} type="team" /> )} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="team" />)} />
+            <ChannelList filters={{}} channelRenderFilterFn={() => {}} List={(listProps) => (<TeamChannelList {...listProps} type="messaging" /> )} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="messaging" />)} />
         </div>
         </>
     )

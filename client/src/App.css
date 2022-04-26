@@ -92,7 +92,7 @@ body {
   justify-content: center;
 
   padding: 2rem;
-  background: #005fff;
+  background: #5e0000;
 }
 
 .auth__form-container_image {
@@ -497,7 +497,6 @@ body {
 }
 
 .channel-list__header {
-  padding-left: 16px;
   height: 62px;
 }
 
@@ -1888,4 +1887,9 @@ div.rta__autocomplete.str-chat__emojisearch {
   .channel-list__sidebar {
     display: none;
   }
+}
+
+.channel-list__header__text {
+  margin-top: 1rem;
+  text-align: center;
 }
