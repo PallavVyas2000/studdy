@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
-@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 
 body {
   background: url(./Images/back.jpg);
@@ -214,7 +214,7 @@ body {
   padding-left: 0;
   padding-top: 20px;
   padding-bottom: 40px;
-  font-family: 'Tourney';
+  font-family: "Tourney";
 }
 
 .auth__form-container_fields-content_button button:hover {
@@ -463,7 +463,14 @@ body {
   /* border-bottom-left-radius: 16px; */
 }
 
-.channel-list__sidebar__icon1 {
+.channel-list__list__wrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-color);
+  width: 240px;
+}
+
+.channel-list__sidebar__icon {
   width: 44px;
   height: 44px;
   margin: 14px;
@@ -472,11 +479,8 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
 }
 
-.channel-list__list__wrapper {
-  display: flex;
-  flex-direction: column;
-  background: var(--primary-color);
-  width: 240px;
+.channel-list__sidebar__icon:hover {
+  cursor: pointer;
 }
 
 .icon1__inner {
@@ -487,22 +491,22 @@ body {
   justify-content: center;
 }
 
-.channel-list__sidebar__icon2 {
-  width: 44px;
-  height: 44px;
-  margin: 14px;
-  background: linear-gradient(150.64deg, rgba(0, 0, 0, 0.1) 12.73%, rgba(0, 0, 0, 0) 89.32%), #ffffff;
-  border-radius: 9999px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
-  cursor: pointer;
-}
-
 .icon2__inner {
   font-family: Helvetica Neue, sans-serif;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
+}
+
+.icon3__inner {
+  font-family: Helvetica Neue, sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
 }
 
 .channel-list__header {
