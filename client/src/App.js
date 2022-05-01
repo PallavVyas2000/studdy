@@ -1,4 +1,6 @@
 import './App.css';
+import 'stream-chat-react/dist/css/index.css';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes } from 'react-router-dom';
 import { StreamChat } from 'stream-chat';
 import { Chat } from 'stream-chat-react';
@@ -24,6 +26,9 @@ if (authToken) {
 }
 
 function App() {
+  const [createType, setCreateType] = useState('');
+  const [isCreating, setIsCreating] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
 
   if (!authToken) return <Auth />;
   return (
@@ -32,8 +37,8 @@ function App() {
         {/* <NavBar /> */}
         <div className="app__wrapper">
           <Chat client={client} theme="team light">
-            <ChannelListContainer />
-            <ChannelContainer />
+            <ChannelListContainer isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} />
+            <ChannelContainer isCreating={isCreating} setIsCreating={setIsCreating} isEditing={isEditing} setIsEditing={setIsEditing} createType={createType}/>
           </Chat>
         </div>
         <Routes>
