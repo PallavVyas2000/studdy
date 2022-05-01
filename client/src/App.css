@@ -1,8 +1,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 
 body {
   background: url(./Images/back.jpg);
-  background-size: 100%;
+  background-repeat: repeat;
 }
 
 /* NAVBAR Styles*/
@@ -30,38 +31,35 @@ body {
   overflow: hidden;
 }
 
-.dropdown-item,.dropdown-divider {
+.dropdown-item,
+.dropdown-divider {
   color: white;
 }
 
 .dropdown-item:hover {
   background-color: rgba(255, 255, 255, 0);
   color: white;
-  text-shadow: 0px 0px 6px #ffffff,
-              0px 0px 10px #ffffff;
+  text-shadow: 0px 0px 6px #ffffff, 0px 0px 10px #ffffff;
 }
 
 .navbar-nav .nav-item:hover {
   background-color: rgba(180, 190, 203, 0.4);
 }
 
-
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /* Chat APP */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
- /*  */  /*  */
-
-
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/* Chat APP */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
 
 :root {
   --primary-color: #d91f23;
@@ -89,10 +87,9 @@ body {
   flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
   padding: 2rem;
-  background: #5e0000;
+  background: #3c0045b6;
+  backdrop-filter: blur(1px);
 }
 
 .auth__form-container_image {
@@ -112,6 +109,7 @@ body {
   justify-content: flex-start;
 
   padding: 2rem;
+  padding-left: 3rem;
   box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
   border-radius: 5px;
   transition: 0.8s ease;
@@ -149,7 +147,7 @@ body {
   font-size: 14px;
   outline: none;
   transition: all 150ms ease-in-out 0s;
-  width: 85%;
+  width: 89%;
   background: #fff;
 }
 
@@ -178,15 +176,14 @@ body {
 }
 
 .auth__form-container_fields-content_button {
-  margin-top: 2rem;
   display: flex;
   justify-content: flex-start;
 }
 
 .auth__form-container_fields-content_button button {
-  border-radius: 4px;
-  background: #005fff;
-  border: 1px solid #005fff;
+  border-radius: 30px;
+  border: 1px solid white;
+  background: #545454;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -194,24 +191,49 @@ body {
   outline: none;
   cursor: pointer;
   transition: 0.3s ease;
+  height: 50px;
+}
+
+.auth-back {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-culogo {
+  position: absolute;
+  height: auto !important;
+  bottom: 7%;
+  left: 47%;
+  width: 20% !important;
+  z-index: 2;
+}
+
+.auth-form__heading {
+  color: white;
+  font-size: 55px;
+  padding-left: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-family: "Tourney";
 }
 
 .auth__form-container_fields-content_button button:hover {
-  background: #0066ff;
+  background: #6000ae;
+  border: 2px solid #6100df;
 }
 
 .auth__form-container_fields-account {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  margin-top: 0.2rem;
 }
 
 .auth__form-container_fields-account p {
   font-size: 14px;
   color: #000;
   font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .auth__form-container_fields-account span {
@@ -420,9 +442,7 @@ body {
   margin-right: 10px;
 }
 
-.str-chat__list--thread
-  .str-chat__message-simple__actions__action--options
-  .str-chat__message-actions-box {
+.str-chat__list--thread .str-chat__message-simple__actions__action--options .str-chat__message-actions-box {
   left: initial;
   right: 100%;
   border-radius: var(--border-radius-md);
@@ -437,25 +457,10 @@ body {
 
 .channel-list__sidebar {
   width: 72px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    var(--primary-color);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--primary-color);
   box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.25);
   /* border-top-left-radius: 16px; */
   /* border-bottom-left-radius: 16px; */
-}
-
-.channel-list__sidebar__icon1 {
-  width: 44px;
-  height: 44px;
-  margin: 14px;
-  background: linear-gradient(
-      150.64deg,
-      rgba(0, 0, 0, 0.1) 12.73%,
-      rgba(0, 0, 0, 0) 89.32%
-    ),
-    #ffffff;
-  border-radius: 9999px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
 }
 
 .channel-list__list__wrapper {
@@ -463,6 +468,19 @@ body {
   flex-direction: column;
   background: var(--primary-color);
   width: 240px;
+}
+
+.channel-list__sidebar__icon {
+  width: 44px;
+  height: 44px;
+  margin: 14px;
+  background: linear-gradient(150.64deg, rgba(0, 0, 0, 0.1) 12.73%, rgba(0, 0, 0, 0) 89.32%), #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
+}
+
+.channel-list__sidebar__icon:hover {
+  cursor: pointer;
 }
 
 .icon1__inner {
@@ -473,27 +491,22 @@ body {
   justify-content: center;
 }
 
-.channel-list__sidebar__icon2 {
-  width: 44px;
-  height: 44px;
-  margin: 14px;
-  background: linear-gradient(
-      150.64deg,
-      rgba(0, 0, 0, 0.1) 12.73%,
-      rgba(0, 0, 0, 0) 89.32%
-    ),
-    #ffffff;
-  border-radius: 9999px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
-  cursor: pointer;
-}
-
 .icon2__inner {
   font-family: Helvetica Neue, sans-serif;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
+}
+
+.icon3__inner {
+  font-family: Helvetica Neue, sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
 }
 
 .channel-list__header {
@@ -1305,8 +1318,7 @@ ul.str-chat__simple-reactions-list:hover {
 
 .str-chat__message-team--editing {
   background: #e9e9ea;
-  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 0 var(--primary-color), inset 0 -1px 0 0 var(--primary-color);
+  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.06), inset 0 1px 0 0 var(--primary-color), inset 0 -1px 0 0 var(--primary-color);
   padding: 15px 20px;
 }
 
@@ -1314,9 +1326,7 @@ ul.str-chat__simple-reactions-list:hover {
   padding: 10px 0 0;
 }
 
-.str-chat__edit-message-form
-  .str-chat__message-team-form-footer
-  button[type="submit"] {
+.str-chat__edit-message-form .str-chat__message-team-form-footer button[type="submit"] {
   color: var(--primary-color);
 }
 
