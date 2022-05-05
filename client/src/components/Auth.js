@@ -33,6 +33,9 @@ const Auth = () => {
     }
 
     window.location.reload();
+    document.body.style.backgroundImage = "none";
+    document.body.style.backgroundColor = "white";
+
   }
 
   const switchMode = () => { setIsSignup((prevIsSignup) => !prevIsSignup) };

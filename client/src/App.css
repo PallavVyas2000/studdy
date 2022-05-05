@@ -1,9 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 
-body {
+/* body {
   background: url(./Images/back.jpg);
   background-repeat: repeat;
+} */
+
+div#no-background {
+  background-image: none;
 }
 
 /* NAVBAR Styles*/
@@ -88,8 +92,11 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background: #3c0045b6;
   backdrop-filter: blur(1px);
+  background: url(./Images/back.jpg) #560e62b6;
+  background-size:cover;
+  /* using blend modes to use background-color and background image together */
+  background-blend-mode:soft-light;
 }
 
 .auth__form-container_image {
@@ -1356,6 +1363,25 @@ ul.str-chat__simple-reactions-list:hover {
 
 .str-chat__message-team-content p a {
   color: var(--primary-color);
+}
+
+/* adjusting emoji position according to the textarea */
+
+.str-chat__input-flat-emojiselect {
+  position: absolute;
+  top: calc(100% - 48px);
+  left: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+.str-chat__input-flat .rfu-file-upload-button {
+  position: absolute;
+  top: calc(100% - 48px);
+  right: 25px;
+  size: 200%;
 }
 
 .pinned-message {

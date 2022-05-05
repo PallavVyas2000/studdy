@@ -6,7 +6,7 @@ import cuiconB from '../../Images/culogo-black.png'
 
 const cookies = new Cookies();
 
-const SideBar = ({logout}) => (
+const SideBar = ({ logout }) => (
     <div className="channel-list__sidebar">
         <div className="channel-list__sidebar__icon">
             <div className="icon1__inner">
@@ -20,7 +20,7 @@ const SideBar = ({logout}) => (
         </div>
         <div className="channel-list__sidebar__icon">
             <div className="icon3__inner" onClick={logout}>
-            <i className="fas fa-sign-out-alt fa-lg"></i>
+                <i className="fas fa-sign-out-alt fa-lg"></i>
             </div>
         </div>
     </div>
@@ -32,29 +32,29 @@ const AppHeader = () => (
     </div>
 )
 
-const ChannelListContainer = () => {
+const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsEditing, setToggleContainer  }) => {
 
     const logout = () => {
-    cookies.remove('token');
-    cookies.remove('userID');
-    cookies.remove('username');
-    cookies.remove('avatarURL');
-    cookies.remove('token');
-    cookies.remove('fullName');
-    cookies.remove('phoneNumber');
-    cookies.remove('hashedPassword');
+        cookies.remove('token');
+        cookies.remove('userID');
+        cookies.remove('username');
+        cookies.remove('avatarURL');
+        cookies.remove('token');
+        cookies.remove('fullName');
+        cookies.remove('phoneNumber');
+        cookies.remove('hashedPassword');
 
-    window.location.reload();
+        window.location.reload();
     }
     return (
         <>
-        <SideBar logout={logout}/>
-        <div className="channel-list__list__wrapper">
-            <AppHeader/>
-            <ChannelSearch/>
-            <ChannelList filters={{}} channelRenderFilterFn={() => {}} List={(listProps) => (<TeamChannelList {...listProps} type="team" /> )} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="team" />)} />
-            <ChannelList filters={{}} channelRenderFilterFn={() => {}} List={(listProps) => (<TeamChannelList {...listProps} type="messaging" /> )} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="messaging" />)} />
-        </div>
+            <SideBar logout={logout} />
+            <div className="channel-list__list__wrapper">
+                <AppHeader />
+                <ChannelSearch setToggleContainer={setToggleContainer} />
+                <ChannelList filters={{}} channelRenderFilterFn={() => { }} List={(listProps) => (<TeamChannelList {...listProps} type="team" isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} setToggleContainer={setToggleContainer} />)} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="team" />)} />
+                <ChannelList filters={{}} channelRenderFilterFn={() => { }} List={(listProps) => (<TeamChannelList {...listProps} type="messaging" isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} setToggleContainer={setToggleContainer} />)} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="messaging" />)} />
+            </div>
         </>
     )
 }

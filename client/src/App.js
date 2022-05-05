@@ -1,5 +1,3 @@
-import './App.css';
-import 'stream-chat-react/dist/css/index.css';
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes } from 'react-router-dom';
 import { StreamChat } from 'stream-chat';
@@ -7,6 +5,12 @@ import { Chat } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 import { ChannelList } from 'stream-chat-react';
 import { ChannelListContainer, ChannelContainer, NavBar, Auth } from './components'
+
+// important to place App.css below the bundled css of stream-chat-react as we will be doing custom styling
+// according to css rules the stylesheet below will be given priority over the later in case of same component 
+// styling and will be overridden
+import 'stream-chat-react/dist/css/index.css';
+import './App.css';
 
 const cookies = new Cookies();
 const apiKey = "huprx5j4vspv";
