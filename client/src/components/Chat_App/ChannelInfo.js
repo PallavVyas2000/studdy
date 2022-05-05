@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const ChannelInfo = () => (
-  <i class="bi bi-info-circle"></i>
+  <i className="bi bi-info-circle"></i>
 );
