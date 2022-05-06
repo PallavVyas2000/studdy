@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ChannelList, useChatContext } from 'stream-chat-react';
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from '..';
 import Cookies from 'universal-cookie';
@@ -6,24 +6,33 @@ import cuiconB from '../../Images/culogo-black.png'
 
 const cookies = new Cookies();
 
-const SideBar = ({ logout }) => (
-    <div className="channel-list__sidebar">
-        <div className="channel-list__sidebar__icon">
-            <div className="icon1__inner">
-                <img src={cuiconB} alt="CU Icon" width="30" />
+const SideBar = ({ logout, handleViewSidebar }) => (
+    <>
+        <div className="channel-list__sidebar">
+            <div className="sidebar-content">
+                <div className="channel-list__sidebar__icon">
+                    <div className="icon1__inner">
+                        <img src={cuiconB} alt="CU Icon" width="30" />
+                    </div>
+                </div>
+                <div className="channel-list__sidebar__icon">
+                    <div className="icon2__inner">
+                        <i className="bi bi-house-fill"></i>
+                    </div>
+                </div>
+                <div className="channel-list__sidebar__icon">
+                    <div className="icon3__inner" onClick={logout}>
+                        <i className="fas fa-sign-out-alt fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+            <div className="sidebar-footer">
+                <div className="icon4__inner" onClick={handleViewSidebar}>
+                    <i className="fas fa-chevron-circle-up fa-2x"></i>
+                </div>
             </div>
         </div>
-        <div className="channel-list__sidebar__icon">
-            <div className="icon2__inner">
-                <i className="bi bi-house-fill"></i>
-            </div>
-        </div>
-        <div className="channel-list__sidebar__icon">
-            <div className="icon3__inner" onClick={logout}>
-                <i className="fas fa-sign-out-alt fa-lg"></i>
-            </div>
-        </div>
-    </div>
+    </>
 );
 
 const AppHeader = () => (
@@ -32,7 +41,7 @@ const AppHeader = () => (
     </div>
 )
 
-const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsEditing, setToggleContainer  }) => {
+const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsEditing, setToggleContainer }) => {
 
     const logout = () => {
         cookies.remove('token');
@@ -46,10 +55,15 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsE
 
         window.location.reload();
     }
+    const [sidebarOpen, setSideBarOpen] = useState(false);
+    const handleViewSidebar = () => {
+        setSideBarOpen(!sidebarOpen);
+    };
+    const sidebarClass = sidebarOpen ? "sidebar open" : "sidebar";
     return (
         <>
-            <SideBar logout={logout} />
-            <div className="channel-list__list__wrapper">
+            <SideBar logout={logout} handleViewSidebar={handleViewSidebar} />
+            <div className={`channel-list__list__wrapper ${sidebarClass}`}>
                 <AppHeader />
                 <ChannelSearch setToggleContainer={setToggleContainer} />
                 <ChannelList filters={{}} channelRenderFilterFn={() => { }} List={(listProps) => (<TeamChannelList {...listProps} type="team" isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} setToggleContainer={setToggleContainer} />)} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="team" />)} />

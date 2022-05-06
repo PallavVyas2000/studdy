@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 
 /* body {
   background: url(./Images/back.jpg);
@@ -66,8 +67,8 @@ div#no-background {
 /*  */ /*  */
 
 :root {
-  --primary-color: #d91f23;
-  --primary-color-alpha: #005fff1a;
+  --primary-color: #b30a0c;
+  --primary-color-alpha: #005eff2f;
 }
 
 html,
@@ -94,9 +95,9 @@ body {
   padding: 2rem;
   backdrop-filter: blur(1px);
   background: url(./Images/back.jpg) #560e62b6;
-  background-size:cover;
+  background-size: cover;
   /* using blend modes to use background-color and background image together */
-  background-blend-mode:soft-light;
+  background-blend-mode: soft-light;
 }
 
 .auth__form-container_image {
@@ -463,11 +464,21 @@ body {
 }
 
 .channel-list__sidebar {
-  width: 72px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--primary-color);
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.25);
-  /* border-top-left-radius: 16px; */
-  /* border-bottom-left-radius: 16px; */
+  width: 75px;
+  background: url(./Images/pattern1.jpg) #780505f7;
+  background-blend-mode: multiply;
+  box-shadow: 8px 0px 7px rgba(0, 0, 0, 0.33);
+  z-index: 5;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content {
+flex-grow: 9;
 }
 
 .channel-list__list__wrapper {
@@ -483,7 +494,7 @@ body {
   margin: 14px;
   background: linear-gradient(150.64deg, rgba(0, 0, 0, 0.1) 12.73%, rgba(0, 0, 0, 0) 89.32%), #ffffff;
   border-radius: 9999px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.33);
 }
 
 .channel-list__sidebar__icon:hover {
@@ -516,17 +527,44 @@ body {
   font-size: 1rem;
 }
 
+.sidebar-footer {
+  flex-grow: 1;
+}
+
+.icon4__inner {
+  font-family: Helvetica Neue, sans-serif;
+  color: rgba(255, 255, 255, 0.858);
+  cursor: pointer;
+  size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 1rem;
+  transform: rotate(90deg);
+  vertical-align: bottom;
+}
+
+.icon4__inner::after {
+  transition: transform .2s ease-in-out;
+}
+
+.icon4__inner:hover {
+  color: white;
+}
+
 .channel-list__header {
   height: 62px;
 }
 
 .channel-list__header__text {
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 28px;
   color: #ffffff;
+  margin-top: 1.1rem;
+  text-align: center;
 }
 
 .channel-search__container {
@@ -547,7 +585,7 @@ body {
   border-radius: 8px;
   margin-bottom: 8px;
   border: 1px solid transparent;
-  width: 95%;
+  width: 93%;
 }
 
 .channel-search__input__wrapper:focus-within {
@@ -948,9 +986,10 @@ body {
 .team-channel-header__name {
   font-family: Helvetica Neue, sans-serif;
   font-weight: bold;
-  font-size: 18px;
-  color: #2c2c30;
-  margin-right: 8px;
+  font-size: 21px;
+  color: #424252;
+  padding-top: 15px;
+  margin-right: 10px;
 }
 
 .team-channel-header__name-wrapper {
@@ -1016,6 +1055,7 @@ body {
   font-family: Helvetica Neue, sans-serif;
   font-size: 14px;
   color: #858688;
+  padding-top: 17px;
 }
 
 .team-channel-list {
@@ -1925,7 +1965,22 @@ div.rta__autocomplete.str-chat__emojisearch {
   }
 }
 
-.channel-list__header__text {
-  margin-top: 1rem;
-  text-align: center;
+.sidebar {
+  position: absolute;
+  left: -15vw;
+  height: 100%;
+  width: 15vw;
+  transition: left 0.3s ease-in-out;
+  z-index: 2;
+}
+.sidebar-toggle {
+  position: absolute;
+  top: 70%;
+  right: -260px;
+  height: 60px;
+  width: 60px;
+  z-index: 3;
+}
+.sidebar.open {
+  left: 72px;
 }

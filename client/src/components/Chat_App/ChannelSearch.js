@@ -23,7 +23,7 @@ const ChannelSearch = () => {
   return (
     <div className="channel-search__container">
       <div className="channel-search__input__wrapper">
-        <div className="channel-search__input_icon">
+        <div className="channel-search__input_icon" style={{paddingLeft: "15px"}}>
         <i className="fas fa-search" style={{color:"white"}}></i>
         </div>
         <input type="text" placeholder="Search" className="channel-search__input__text" style={{paddingLeft : "10px"}} value={query} onChange={onSearch} />
