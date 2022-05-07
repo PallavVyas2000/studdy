@@ -6,7 +6,7 @@ import cuiconB from '../../Images/culogo-black.png'
 
 const cookies = new Cookies();
 
-const SideBar = ({ logout, handleViewSidebar }) => (
+const SideBar = ({ logout, toggleSidebar, mini }) => (
     <>
         <div className="channel-list__sidebar">
             <div className="sidebar-content">
@@ -27,8 +27,8 @@ const SideBar = ({ logout, handleViewSidebar }) => (
                 </div>
             </div>
             <div className="sidebar-footer">
-                <div className="icon4__inner" onClick={handleViewSidebar}>
-                    <i className="fas fa-chevron-circle-up fa-2x"></i>
+                <div className="icon4__inner" onClick={toggleSidebar}>
+                    <i className={`fas fa-chevron-circle-up fa-2x rotate${mini ? "" : "-back"}`}></i>
                 </div>
             </div>
         </div>
@@ -55,15 +55,25 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsE
 
         window.location.reload();
     }
-    const [sidebarOpen, setSideBarOpen] = useState(false);
-    const handleViewSidebar = () => {
-        setSideBarOpen(!sidebarOpen);
-    };
-    const sidebarClass = sidebarOpen ? "sidebar open" : "sidebar";
+
+    const [mini, setMini] = useState(true);
+
+    const toggleSidebar = () => {
+        if (mini) {
+            document.getElementById("mySidebar").style.width = "290px";
+            document.getElementById("mySidebar").style.left = "65px";
+            setMini(false);
+        } else {
+            document.getElementById("mySidebar").style.width = "0px";
+            setMini(true);
+        }
+    }
+    
     return (
         <>
-            <SideBar logout={logout} handleViewSidebar={handleViewSidebar} />
-            <div className={`channel-list__list__wrapper ${sidebarClass}`}>
+            <SideBar logout={logout} toggleSidebar={toggleSidebar} mini={mini}/>
+            {/* <div className={`channel-list__list__wrapper ${sidebarClass}`}> */}
+            <div id="mySidebar" className="sidebar">
                 <AppHeader />
                 <ChannelSearch setToggleContainer={setToggleContainer} />
                 <ChannelList filters={{}} channelRenderFilterFn={() => { }} List={(listProps) => (<TeamChannelList {...listProps} type="team" isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} setToggleContainer={setToggleContainer} />)} Preview={(previewProps) => (<TeamChannelPreview {...previewProps} type="team" />)} />

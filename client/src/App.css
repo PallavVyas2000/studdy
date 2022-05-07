@@ -552,8 +552,64 @@ flex-grow: 9;
   color: white;
 }
 
+/* .sidebar {
+  position: absolute;
+  left: -15vw;
+  height: 100%;
+  width: 15vw;
+  transition: left 0.3s ease-in-out;
+  z-index: 2;
+}
+.sidebar-toggle {
+  position: absolute;
+  top: 70%;
+  right: -260px;
+  height: 60px;
+  width: 60px;
+  z-index: 3;
+}
+.sidebar.open {
+  left: 72px;
+} */
+
+.sidebar {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-color: #111;
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 20px;
+  white-space: nowrap;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+main .sidebar {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  padding: 16px;
+
+}
+
 .channel-list__header {
   height: 62px;
+  margin-bottom: 10px;
 }
 
 .channel-list__header__text {
@@ -572,7 +628,7 @@ flex-grow: 9;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 16px;
+  padding: 0px 20px 16px;
   border-top: 1px solid #00000033;
 }
 
@@ -583,7 +639,7 @@ flex-grow: 9;
   height: 40px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
   width: 93%;
 }
@@ -1059,9 +1115,10 @@ flex-grow: 9;
 }
 
 .team-channel-list {
-  width: 100%;
+  width: 105%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 15px;
 }
 
 .team-channel-list__message {
@@ -1086,11 +1143,19 @@ flex-grow: 9;
 
 .team-channel-list__header__title {
   font-family: Helvetica Neue, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
   height: 16px;
-  color: rgba(255, 255, 255, 0.66);
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
+  padding-left: 14px;
+}
+
+.team-channel-list_content {
+padding: 0% 26px;
+padding-left: 47px;
+font-size: 14px;
+color: rgba(255, 255, 255, 0.679);
 }
 
 .channel-preview__wrapper {
@@ -1965,22 +2030,16 @@ div.rta__autocomplete.str-chat__emojisearch {
   }
 }
 
-.sidebar {
-  position: absolute;
-  left: -15vw;
-  height: 100%;
-  width: 15vw;
-  transition: left 0.3s ease-in-out;
-  z-index: 2;
+.rotate {
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
-.sidebar-toggle {
-  position: absolute;
-  top: 70%;
-  right: -260px;
-  height: 60px;
-  width: 60px;
-  z-index: 3;
-}
-.sidebar.open {
-  left: 72px;
+.rotate-back {
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
 }

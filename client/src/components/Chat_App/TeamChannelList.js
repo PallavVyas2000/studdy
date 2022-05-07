@@ -29,7 +29,9 @@ const TeamChannelList = ({ setToggleContainer, children, error = false, loading,
                 </p>
                 <i className="bi bi-plus-circle-dotted" style={{color:"white"}} onClick={() => { setCreateType(type === 'team' ? 'team' : 'messaging'); setIsCreating((prevState) => !prevState); setIsEditing(false); if (setToggleContainer) setToggleContainer((prevState) => !prevState) }}></i>
             </div>
+            <div className="team-channel-list_content">
             {children}
+            </div>
         </div>
     )
 }
