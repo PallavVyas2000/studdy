@@ -613,13 +613,20 @@ main .sidebar {
 }
 
 .channel-list__header__text {
+  font-family: "Tourney", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.channel-list__header__text_2 {
   font-family: "Josefin Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 28px;
   color: #ffffff;
-  margin-top: 1.1rem;
   text-align: center;
 }
 
@@ -628,7 +635,7 @@ main .sidebar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 20px 16px;
+  padding: 15px 20px 16px;
   border-top: 1px solid #00000033;
 }
 
@@ -2039,7 +2046,7 @@ div.rta__autocomplete.str-chat__emojisearch {
   -moz-transition: all .5s ease;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
-  -moz-transform:rotate(180deg);
-  -webkit-transform:rotate(180deg);
-  transform:rotate(180deg);
+  -moz-transform:rotate(-180deg);
+  -webkit-transform:rotate(-180deg);
+  transform:rotate(-180deg);
 }

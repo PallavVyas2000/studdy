@@ -18,11 +18,11 @@ const ListContainer = ({ children }) => {
 const UserItem = ({ user, setSelectedUsers }) => {
     const [selected, setSelected] = useState(false);
     const handleSelect = () => {
-        if(selected) {
+        if (selected) {
             setSelectedUsers((prevUsers) => prevUsers.filter((prevUser) => prevUser !== user.id))
         }
         else {
-            setSelectedUsers((prevUsers) => [... prevUsers, user.id])
+            setSelectedUsers((prevUsers) => [...prevUsers, user.id])
         }
         setSelected((prevSelected) => !prevSelected)
     }
@@ -69,22 +69,22 @@ const UserList = ({ setSelectedUsers }) => {
         if (client) getUsers();
     }, [])
 
-    if(error) {
+    if (error) {
         return (
             <ListContainer>
-            <div className="user-list__message">
-                Error loading, please refresh and try again.
-            </div>
+                <div className="user-list__message">
+                    Error loading, please refresh and try again.
+                </div>
             </ListContainer>
         )
     }
 
-    if(listEmpty) {
+    if (listEmpty) {
         return (
             <ListContainer>
-            <div className="user-list__message">
-                No users found.
-            </div>
+                <div className="user-list__message">
+                    No users found.
+                </div>
             </ListContainer>
         )
     }
