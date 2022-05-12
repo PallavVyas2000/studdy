@@ -1,12 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../Images/cu-logo-bw.png';
+import Cookies from 'universal-cookie';
 
+const cookies = new Cookies();
 
 const NavBar = () => {
-    // const handleLogout = () => {
-    //     localStorage.removeItem('token')
-    // }
+    const logout = () => {
+        cookies.remove('token');
+        cookies.remove('userID');
+        cookies.remove('username');
+        cookies.remove('avatarURL');
+        cookies.remove('token');
+        cookies.remove('fullName');
+        cookies.remove('phoneNumber');
+        cookies.remove('hashedPassword');
+
+        window.location.reload();
+    }
     return (
         <>
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
@@ -24,10 +35,10 @@ const NavBar = () => {
                         <ul className="navbar-nav ms-md-auto gap-2">
                             <ul className="navbar-nav ms-md-auto gap-2">
                                 <li className="nav-item rounded">
-                                    <Link className="nav-link active" aria-current="page" to="/"><i className="bi bi-house-fill" style={{fontSize: "25px"}}></i></Link>
+                                    <Link className="nav-link active" aria-current="page" to="/"><i className="bi bi-house-fill" style={{fontSize: "27px"}}></i></Link>
                                 </li>
                                 <li className="nav-item rounded">
-                                    <Link className="nav-link active" aria-current="page" to="/chat"><i className="bi bi-chat-left-quote-fill" style={{fontSize: "25px"}}></i></Link>
+                                    <Link className="nav-link active" style={{paddingBottom : "3px"}} aria-current="page" to="/chat"><i className="bi bi-chat-left-quote-fill" style={{fontSize: "27px"}}></i></Link>
                                 </li>
                                 <li className="nav-item rounded">
                                     <Link className="nav-link active" to="/about"><i className="bi bi-info-square-fill" style={{fontSize: "25px"}}></i></Link>
@@ -47,10 +58,7 @@ const NavBar = () => {
                                         <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-file-person-fill" style={{fontSize: "25px"}}></i></Link>
                                         <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                             <li><Link className="dropdown-item" to="#">Account</Link></li>
-                                            <li>
-                                                <hr className="dropdown-divider" />
-                                            </li>
-                                            <li><Link className="dropdown-item" /*onClick={handleLogout}*/ to="/login">Logout</Link></li>
+                                            <li><Link className="dropdown-item" onClick={logout} to="/login">Logout</Link></li>
                                         </ul>
                                     </li>}
                             </ul>

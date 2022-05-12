@@ -1,8 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 /* body {
   background: url(./Images/back.jpg);
   background-repeat: repeat;
@@ -26,27 +26,22 @@ div#no-background {
   padding: 5px 0%;
 }
 
-
-
 .dropdown-menu {
   border-radius: 20px;
-  background: rgba(154, 78, 78, 0.1);
-  backdrop-filter: blur(20px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
-  padding: 10px 15px 10px 15px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.485);
+  padding: 0;
   overflow: hidden;
 }
 
-.dropdown-item,
-.dropdown-divider {
-  color: white;
+.dropdown-item {
+  text-align: center;
+  padding: 7px;
 }
 
 .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: white;
-  text-shadow: 0px 0px 6px #ffffff, 0px 0px 10px #ffffff;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .navbar-nav .nav-item:hover {
@@ -480,7 +475,7 @@ body {
 }
 
 .sidebar-content {
-flex-grow: 9;
+  flex-grow: 9;
 }
 
 .channel-list__list__wrapper {
@@ -501,6 +496,9 @@ flex-grow: 9;
 
 .channel-list__sidebar__icon:hover {
   cursor: pointer;
+  transition: all 0.35s ease;
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 .icon1__inner {
@@ -547,32 +545,12 @@ flex-grow: 9;
 }
 
 .icon4__inner::after {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .icon4__inner:hover {
   color: white;
 }
-
-/* .sidebar {
-  position: absolute;
-  left: -15vw;
-  height: 100%;
-  width: 15vw;
-  transition: left 0.3s ease-in-out;
-  z-index: 2;
-}
-.sidebar-toggle {
-  position: absolute;
-  top: 70%;
-  right: -260px;
-  height: 60px;
-  width: 60px;
-  z-index: 3;
-}
-.sidebar.open {
-  left: 72px;
-} */
 
 .sidebar {
   height: 100%;
@@ -606,7 +584,6 @@ main .sidebar {
 
 #main {
   padding: 16px;
-
 }
 
 .channel-list__header {
@@ -694,7 +671,7 @@ main .sidebar {
   width: fit-content;
   display: flex;
   align-items: center;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -1165,10 +1142,10 @@ main .sidebar {
 }
 
 .team-channel-list_content {
-padding: 0% 26px;
-padding-left: 47px;
-font-size: 14px;
-color: rgba(255, 255, 255, 0.679);
+  padding: 0% 26px;
+  padding-left: 47px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.679);
 }
 
 .channel-preview__wrapper {
@@ -1177,7 +1154,9 @@ color: rgba(255, 255, 255, 0.679);
   align-items: center;
 }
 
-.channel-preview__wrapper, .channel-preview__wrapper__selected, p {
+.channel-preview__wrapper,
+.channel-preview__wrapper__selected,
+p {
   margin-bottom: 0%;
 }
 
@@ -2049,15 +2028,15 @@ div.rta__autocomplete.str-chat__emojisearch {
 }
 
 .rotate {
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .rotate-back {
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-  -moz-transform:rotate(-180deg);
-  -webkit-transform:rotate(-180deg);
-  transform:rotate(-180deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }

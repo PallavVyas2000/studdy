@@ -19,7 +19,7 @@ const SideBar = ({ logout, toggleSidebar, mini }) => (
                 <div className="channel-list__sidebar__icon">
                     <div className="icon2__inner">
                         <Link aria-current="page" to="/">
-                            <i className="bi bi-house-fill"></i>
+                            <i className="bi bi-house-fill" style={{color : "black"}}></i>
                         </Link>
                     </div>
                 </div>
