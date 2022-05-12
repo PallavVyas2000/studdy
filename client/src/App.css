@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -13,18 +14,19 @@ div#no-background {
 
 /* NAVBAR Styles*/
 .navtitle {
-  font-family: "Azonix";
-  font-size: larger;
+  color: white;
+  font-size: 40px;
+  padding-left: 0;
+  font-family: "Tourney";
 }
 .navbar {
   backdrop-filter: blur(4px);
-  background: #b76b6b36;
+  background: #000000;
   color: white;
+  padding: 5px 0%;
 }
 
-.navbar-brand {
-  filter: drop-shadow(0 0 0.75rem rgb(255, 93, 93));
-}
+
 
 .dropdown-menu {
   border-radius: 20px;
@@ -1285,7 +1287,7 @@ color: rgba(255, 255, 255, 0.679);
 
 .str-chat__message-team-meta time {
   visibility: visible;
-  z-index: 2;
+  z-index: 1;
   font-family: Helvetica Neue, sans-serif;
   font-style: normal;
   font-weight: normal;

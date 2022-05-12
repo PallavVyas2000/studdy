@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../Images/culogo.png';
+import logo from '../Images/cu-logo-bw.png';
 
 
 const NavBar = () => {
@@ -12,10 +12,10 @@ const NavBar = () => {
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
                 <div className="container-fluid">
                     <Link to="#" className="navbar-brand">
-                        <img src={logo} height="40" alt="CloudBook" />
+                        <img src={logo} height="60" alt="STUDDY" />
                     </Link>
                     <div className="d-flex align-items-center navtitle justify-content-center">
-                        STUDDY
+                        STUDDY.
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -24,10 +24,13 @@ const NavBar = () => {
                         <ul className="navbar-nav ms-md-auto gap-2">
                             <ul className="navbar-nav ms-md-auto gap-2">
                                 <li className="nav-item rounded">
-                                    <Link className="nav-link active" aria-current="page" to="/"><i className="bi bi-house-fill me-2"></i>Home</Link>
+                                    <Link className="nav-link active" aria-current="page" to="/"><i className="bi bi-house-fill" style={{fontSize: "25px"}}></i></Link>
                                 </li>
                                 <li className="nav-item rounded">
-                                    <Link className="nav-link" to="/about"><i className="bi bi-people-fill me-2"></i>About</Link>
+                                    <Link className="nav-link active" aria-current="page" to="/chat"><i className="bi bi-chat-left-quote-fill" style={{fontSize: "25px"}}></i></Link>
+                                </li>
+                                <li className="nav-item rounded">
+                                    <Link className="nav-link active" to="/about"><i className="bi bi-info-square-fill" style={{fontSize: "25px"}}></i></Link>
                                 </li>
                             </ul>
                             <ul className="navbar-nav ms-md-auto gap-2">
@@ -41,7 +44,7 @@ const NavBar = () => {
                                         </li>
                                     </form> :
                                     <li className="nav-item dropdown rounded">
-                                        <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-person-circle me-2"></i>Profile</Link>
+                                        <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-file-person-fill" style={{fontSize: "25px"}}></i></Link>
                                         <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                             <li><Link className="dropdown-item" to="#">Account</Link></li>
                                             <li>

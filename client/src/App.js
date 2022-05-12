@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import { StreamChat } from 'stream-chat';
 import { Chat } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
-import { ChannelList } from 'stream-chat-react';
-import { ChannelListContainer, ChannelContainer, NavBar, Auth } from './components'
+import { ChannelListContainer, ChannelContainer, Auth } from './components'
+import HomePage from './components/HomePage';
 
 // important to place App.css below the bundled css of stream-chat-react as we will be doing custom styling
 // according to css rules the stylesheet below will be given priority over the later in case of same component 
@@ -38,15 +42,15 @@ function App() {
   return (
     <>
       <Router>
-        {/* <NavBar /> */}
         <div className="app__wrapper">
-          <Chat client={client} theme="team light">
-            <ChannelListContainer isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} />
-            <ChannelContainer isCreating={isCreating} setIsCreating={setIsCreating} isEditing={isEditing} setIsEditing={setIsEditing} createType={createType}/>
-          </Chat>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/chat" element={<Chat client={client} theme="team light">
+              <ChannelListContainer isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} />
+              <ChannelContainer isCreating={isCreating} setIsCreating={setIsCreating} isEditing={isEditing} setIsEditing={setIsEditing} createType={createType} />
+            </Chat>} />
+          </Routes>
         </div>
-        <Routes>
-        </Routes>
       </Router>
     </>
   );

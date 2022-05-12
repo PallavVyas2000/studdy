@@ -3,6 +3,7 @@ import { ChannelList, useChatContext } from 'stream-chat-react';
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from '..';
 import Cookies from 'universal-cookie';
 import cuiconB from '../../Images/culogo-black.png'
+import { Link } from 'react-router-dom'
 
 const cookies = new Cookies();
 
@@ -17,7 +18,9 @@ const SideBar = ({ logout, toggleSidebar, mini }) => (
                 </div>
                 <div className="channel-list__sidebar__icon">
                     <div className="icon2__inner">
-                        <i className="bi bi-house-fill"></i>
+                        <Link aria-current="page" to="/">
+                            <i className="bi bi-house-fill"></i>
+                        </Link>
                     </div>
                 </div>
                 <div className="channel-list__sidebar__icon">
