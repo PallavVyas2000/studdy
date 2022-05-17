@@ -57,7 +57,7 @@ const NavBar = () => {
                                     <li className="nav-item dropdown rounded">
                                         <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-file-person-fill" style={{fontSize: "25px"}}></i></Link>
                                         <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                            <li><Link className="dropdown-item" to="#">Account</Link></li>
+                                            <li><Link className="dropdown-item" to="#">Profile</Link></li>
                                             <li><Link className="dropdown-item" onClick={logout} to="/login">Logout</Link></li>
                                         </ul>
                                     </li>}

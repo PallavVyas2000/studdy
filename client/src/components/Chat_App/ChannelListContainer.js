@@ -13,7 +13,9 @@ const SideBar = ({ logout, toggleSidebar, mini }) => (
             <div className="sidebar-content">
                 <div className="channel-list__sidebar__icon">
                     <div className="icon1__inner">
+                    <a target="_blank" href="https://cuchd.in">
                         <img src={cuiconB} alt="CU Icon" width="30" />
+                    </a>
                     </div>
                 </div>
                 <div className="channel-list__sidebar__icon">

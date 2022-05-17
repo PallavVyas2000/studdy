@@ -8,6 +8,44 @@
   background-repeat: repeat;
 } */
 
+
+/* ScrollBar design */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 6px;
+  height: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff002f;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ff002f;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+/* ////////////// */
+
 div#no-background {
   background-image: none;
 }
@@ -24,6 +62,7 @@ div#no-background {
   background: #000000;
   color: white;
   padding: 5px 0%;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.934);
 }
 
 .dropdown-menu {
@@ -32,11 +71,13 @@ div#no-background {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.485);
   padding: 0;
   overflow: hidden;
+  min-width: 7rem;
 }
 
 .dropdown-item {
   text-align: center;
-  padding: 7px;
+  font-family:"Josefin Sans";
+  padding: 9px;
 }
 
 .dropdown-item:hover {
@@ -2039,4 +2080,121 @@ div.rta__autocomplete.str-chat__emojisearch {
   -moz-transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
+}
+
+
+/* Attendance display Styles*/
+
+.attendance {
+  background-color: #0000;
+}
+
+.attendance-parent {
+  border-radius: 40px;
+  background: rgba(81, 0, 174, 0.673);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: none;
+  color: white;
+}
+
+.attendance-parent li {
+  padding: 20px 0px;
+  display: flex;
+  width: 380px;
+  height: 180px
+}
+
+.attendance-item {
+  margin-bottom: 0%;
+  padding: 0%;
+  display: flex;
+}
+
+.attendance-item p {
+  font-family : "Righteous";
+  font-size: 17px;
+}
+
+.attendance-item span {
+  font-size: 13px;
+}
+
+.attendance-item ul {
+  margin-bottom: 0%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.attendance-item-content {
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-right: 50px;
+  width: 145%;
+}
+
+/* Notice display Styles*/
+.notice-items {
+  padding-top: 1 rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+li{
+  list-style-type: none;
+}
+
+.notice-items img {
+  width: 15px;
+}
+
+.card-notice {
+  position: relative;
+  width: 640px;
+  margin: 7% auto;
+  color: white;
+  border-radius: 40px;
+  background: rgba(92, 7, 44, 0.673);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: none;
+}
+
+/*Homepage*/
+
+.container-home {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.backVid {
+  object-fit: cover;
+}
+.home-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Time Table */
+
+.card-tt {
+  position: relative;
+  width: 640px;
+  margin: 7% auto;
+  color: white;
+  border-radius: 40px;
+  background: rgba(0, 139, 147, 0.673);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: none;
 }
