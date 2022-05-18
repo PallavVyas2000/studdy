@@ -2,12 +2,13 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 /* body {
   background: url(./Images/back.jpg);
   background-repeat: repeat;
 } */
-
 
 /* ScrollBar design */
 
@@ -43,7 +44,6 @@
   background: transparent;
 }
 
-
 /* ////////////// */
 
 div#no-background {
@@ -76,7 +76,7 @@ div#no-background {
 
 .dropdown-item {
   text-align: center;
-  font-family:"Josefin Sans";
+  font-family: "Josefin Sans";
   padding: 9px;
 }
 
@@ -87,6 +87,10 @@ div#no-background {
 
 .navbar-nav .nav-item:hover {
   background-color: rgba(180, 190, 203, 0.4);
+}
+
+.dropdown-menu {
+  border: 0px;
 }
 
 /*  */ /*  */
@@ -2082,7 +2086,6 @@ div.rta__autocomplete.str-chat__emojisearch {
   transform: rotate(-180deg);
 }
 
-
 /* Attendance display Styles*/
 
 .attendance {
@@ -2103,7 +2106,7 @@ div.rta__autocomplete.str-chat__emojisearch {
   padding: 20px 0px;
   display: flex;
   width: 380px;
-  height: 180px
+  height: 180px;
 }
 
 .attendance-item {
@@ -2113,7 +2116,7 @@ div.rta__autocomplete.str-chat__emojisearch {
 }
 
 .attendance-item p {
-  font-family : "Righteous";
+  font-family: "Righteous";
   font-size: 17px;
 }
 
@@ -2140,7 +2143,7 @@ div.rta__autocomplete.str-chat__emojisearch {
   background-color: rgba(0, 0, 0, 0);
 }
 
-li{
+li {
   list-style-type: none;
 }
 
@@ -2197,4 +2200,83 @@ li{
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   border: none;
+}
+
+/* About Page */
+
+.container-about {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.about-content {
+  position: absolute;
+  color: white;
+  overflow: hidden;
+  top: 100px;
+  left: 200px;
+}
+
+.about-content h1 {
+  font-family: "Tourney", Impact;
+  font-weight: 500;
+  font-size: 70px;
+}
+
+.about-content h2 {
+  font-size: 40px;
+  font-family: "Koulen", cursive;
+}
+
+.about-content p {
+  font-size: 20px;
+  font-family: "Josefin Sans";
+}
+
+/* Profile Page */
+
+.container-profile {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-profile {
+  padding: 30px;
+  margin: 7% auto;
+  color: white;
+  border-radius: 35px;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: none;
+  position: absolute;
+  width: 67%;
+  height: 73%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pfp {
+  width: 245px;
+  height: 260px;
+  object-fit: cover;
+}
+
+#cu-profile-logo {
+  width: 380px;
+}
+
+.pr {
+  margin-bottom: 20px;
 }
