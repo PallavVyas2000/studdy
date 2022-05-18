@@ -11,13 +11,13 @@ const NoticeBoard = () => {
         <div className="card notice-items">
           <ul>
             <li>
-              <p><img src={chalk}/>  First notice</p>
+              <p><img src={chalk} alt=""/>  First notice</p>
               <hr />
-              <p><img src={chalk}/>  Second notice</p>
+              <p><img src={chalk} alt=""/>  Second notice</p>
               <hr />
-              <p><img src={chalk}/>  Third notice</p>
+              <p><img src={chalk} alt=""/>  Third notice</p>
               <hr />
-              <p><img src={chalk}/>  Fourth notice</p>
+              <p><img src={chalk} alt=""/>  Fourth notice</p>
             </li>
           </ul>
         </div>

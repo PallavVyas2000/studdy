@@ -15,6 +15,8 @@ import HomePage from './components/HomePage';
 // styling and will be overridden
 import 'stream-chat-react/dist/css/index.css';
 import './App.css';
+import Profile from './Profile';
+import About from './components/About';
 
 const cookies = new Cookies();
 const apiKey = "huprx5j4vspv";
@@ -45,6 +47,8 @@ function App() {
         <div className="app__wrapper">
           <Routes>
             <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/profile" element={<Profile/>}/>
+            <Route exact path="/about" element={<About/>}/>
             <Route exact path="/chat" element={<Chat client={client} theme="team light">
               <ChannelListContainer isCreating={isCreating} setIsCreating={setIsCreating} setCreateType={setCreateType} setIsEditing={setIsEditing} />
               <ChannelContainer isCreating={isCreating} setIsCreating={setIsCreating} isEditing={isEditing} setIsEditing={setIsEditing} createType={createType} />
