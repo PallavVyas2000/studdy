@@ -2198,7 +2198,7 @@ li {
   margin: 7% auto;
   color: white;
   border-radius: 40px;
-  background: rgba(92, 7, 44, 0.673);
+  background: rgba(105, 5, 48, 0.673);
   backdrop-filter: blur(2px);
   overflow: hidden;
   border: none;
@@ -2288,6 +2288,68 @@ li {
   color:rgb(0, 234, 255);
   font-weight: 600;
 }
+
+/* DateSheet */
+
+.datesheet {
+  justify-content: center;
+  display: flex;
+}
+
+.detailsColumn {
+  flex-grow: 1;
+  color: white;
+}
+
+.card-ds {
+  position: relative;
+  width: 640px;
+  margin: 7% auto;
+  color: white;
+  border-radius: 40px;
+  background: rgba(152, 0, 0, 0.673);
+  overflow: hidden;
+  border: none;
+}
+
+.ds-items li {
+  color: white;
+}
+
+.ds-items ul {
+  margin-bottom: 0.4rem;
+  padding: 0 1rem;
+  padding-bottom: 0.7rem;
+}
+
+.ds-items hr {
+  margin-block-end: 1rem;
+  margin-block-start: 0rem;
+}
+
+.ds-items {
+  padding: 3% 4%;
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+  border: none;
+  background-color: #0000;
+}
+
+.sub-name-ds {
+  font-weight: 600;
+  color: rgb(255, 172, 172);
+}
+
+.ds-group {
+  color: rgba(255, 248, 57, 0.672);
+  font-weight: 600;
+}
+
+.ds-time {
+  color:rgb(0, 234, 255);
+  font-weight: 600;
+}
+
 /* About Page */
 
 .container-about {

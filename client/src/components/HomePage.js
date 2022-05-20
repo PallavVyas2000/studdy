@@ -5,6 +5,7 @@ import NoticeBoard from './DashBoard/NoticeBoard'
 import TimeTable from './DashBoard/TimeTable'
 import videoBG from '../Images/videoBG.mp4'
 import Weather from './DashBoard/Weather'
+import DateSheet from './DashBoard/DateSheet'
 
 const HomePage = () => {
 
@@ -18,6 +19,7 @@ const HomePage = () => {
             <div className="col">
               <NoticeBoard />
               <TimeTable />
+              <DateSheet />
             </div>
             <div className="col">
               <Attendance />
