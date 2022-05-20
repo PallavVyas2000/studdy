@@ -23,6 +23,13 @@ const About = (props) => {
           <h2>In Association with <i>Chandigarh University</i></h2>
           <br />
           <img src={culogo} alt="Chandigarh University" />
+          <br /><br /><br />
+          <h3>Created by :-</h3>
+          <br />
+          <p>Pallav Vyas (18BCS3551)</p>
+          <p>Deepak Sarin (18BCS3609)</p>
+          <p>Sarwarth Sood  (18BCS3604)</p>
+          <p>Faisal Raza (18BCS3619)</p>
         </div>
       </div>
     </>

@@ -4,6 +4,7 @@ import { ChannelSearch, TeamChannelList, TeamChannelPreview } from '..';
 import Cookies from 'universal-cookie';
 import cuiconB from '../../Images/culogo-black.png'
 import { Link } from 'react-router-dom'
+import uims from '../../Images/uims-logo.jpg'
 
 const cookies = new Cookies();
 
@@ -13,15 +14,29 @@ const SideBar = ({ logout, toggleSidebar, mini }) => (
             <div className="sidebar-content">
                 <div className="channel-list__sidebar__icon">
                     <div className="icon1__inner">
-                    <a target="_blank" href="https://cuchd.in">
-                        <img src={cuiconB} alt="CU Icon" width="30" />
-                    </a>
+                        <a target="_blank" href="https://cuchd.in">
+                            <img src={cuiconB} alt="CU Icon" width="30" />
+                        </a>
+                    </div>
+                </div>
+                <div className="channel-list__sidebar__icon">
+                    <div className="icon6__inner">
+                        <a target="_blank" href="https://uims.cuchd.in">
+                            <img src={uims} alt="CUIMS" width="30" />
+                        </a>
+                    </div>
+                </div>
+                <div className="channel-list__sidebar__icon">
+                    <div className="icon5__inner">
+                        <a target="_blank" href="https://cuchd.blackboard.com">
+                            <i className="fas fa-pen-square" style={{ color: "black" }}></i>
+                        </a>
                     </div>
                 </div>
                 <div className="channel-list__sidebar__icon">
                     <div className="icon2__inner">
                         <Link aria-current="page" to="/">
-                            <i className="bi bi-house-fill" style={{color : "black"}}></i>
+                            <i className="bi bi-house-fill" style={{ color: "black" }}></i>
                         </Link>
                     </div>
                 </div>
