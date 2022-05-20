@@ -4,6 +4,7 @@ import Attendance from './DashBoard/Attendance'
 import NoticeBoard from './DashBoard/NoticeBoard'
 import TimeTable from './DashBoard/TimeTable'
 import videoBG from '../Images/videoBG.mp4'
+import Weather from './DashBoard/Weather'
 
 const HomePage = () => {
 
@@ -20,10 +21,8 @@ const HomePage = () => {
             </div>
             <div className="col">
               <Attendance />
+              <Weather/>
             </div>
-          </div>
-          <div style={{color: "white", fontSize: "23px"}}>
-          Weather Widget
           </div>
         </div>
       </div>

@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 /* body {
   background: url(./Images/back.jpg);
@@ -2250,7 +2251,6 @@ li {
 }
 
 .card-profile {
-  padding: 30px;
   margin: 7% auto;
   color: white;
   border-radius: 35px;
@@ -2265,18 +2265,273 @@ li {
   top: 0;
   display: flex;
   flex-direction: column;
+  padding-right: 10px;
+  padding-top: 30px;
 }
 
 .pfp {
   width: 245px;
   height: 260px;
   object-fit: cover;
+  margin-right: 50px;
 }
 
 #cu-profile-logo {
   width: 380px;
+  margin-right: 150px;
 }
 
 .pr {
-  margin-bottom: 20px;
+  height: 25%;
+  margin-left: 40px;
+}
+
+.pr p {
+  color: #000;
+}
+
+.uid {
+  font-family: 'Libre Barcode 39 Text', cursive;
+  color: #000;
+  font-size: 130px;
+  position: absolute;
+  top: 0;
+}
+
+.pd {
+  font-size: 30px;
+  font-family: "Viga", cursive;
+  white-space:pre;
+  height: 230px;
+}
+
+.sb {
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 200px;
+  flex-grow: 0;
+  margin-top: 100px;
+  margin-left: 50px;
+  background-color: #110080;
+}
+
+.sb p {
+  color: white;
+  white-space: pre;
+  font-family: "Impact";
+  font-size: 37px;
+  letter-spacing: 2px;
+}
+
+.tc {
+top: 100px;
+display: flex;
+margin-left: 64%;
+margin-right: 40px;
+}
+
+.tc p{
+  color: red;
+  font-family: "Koulen";
+  font-size: 30px;
+}
+
+.br {
+  margin-left: 300px;
+  margin-right: 70px;
+}
+
+.br hr {
+  color: black;
+  height: 2px;
+}
+
+.brt {
+  color: #000;
+}
+
+.lr {
+  margin-top: 30px;
+  height: 90px;
+}
+
+.lrfc {
+  background-color: red;
+  color: white;
+  font-family:"Righteous";
+  display: flex;
+  padding: 30px;
+  align-items: left;
+}
+
+.lrlc {
+  background-color: black;
+  color: white;
+  font-family:"Righteous";
+  display: flex;
+  max-width: 12%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Time Table */
+
+.timetable {
+  color: #000;
+}
+
+/* Weather Component */
+
+.App {
+  height: 100vh;
+  transition: all .3s ease-in-out;
+  width: 100vw;
+}
+
+.widget {
+  border-radius: 30px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16), 0 3px 5px rgba(0, 0, 0, 0.23);
+  padding: 1rem 2rem;
+  margin-top: 40px;
+}
+
+.inline-input {
+  align-items: flex-start;
+  border-bottom: 1px dotted #fff;
+  display: flex;
+  margin: .5rem 0 1.5rem 0;
+}
+
+.inline-input:focus-within {
+  border-bottom: 1px dotted #333;
+  transition: all .3s ease-in-out;
+}
+
+.inline-input .mdi {
+  color: #fff;
+  padding: 0.2rem 0.5rem 0 0;
+}
+
+.location-input {
+  display: flex;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  max-width: 16rem;
+  outline: none;
+  padding-bottom: .3rem;
+}
+
+.main-display {
+  align-items: flex-start;
+  display: flex;
+  justify-content: start;
+  margin: .5rem 0 .5rem 0;
+}
+
+.main-info {
+  align-items: flex-start;
+  display: flex;
+  justify-content: start;
+  order: 0;
+}
+
+.temp-measurement {
+  color: rgb(210, 210, 210);
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: .85;
+}
+
+.temp-unit {
+  vertical-align: top;
+  color: rgb(210, 210, 210);
+}
+
+.sub-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 0 .8rem;
+  order: 1;
+}
+
+.sub-info-title {
+  font-size: 1.15rem;
+  margin: 0 0 .3rem 0;
+  text-align: start;
+  color: rgba(210, 210, 210, 0.808);
+}
+
+.sub-info-text {
+  font-size: .7rem;
+  color: rgba(210, 210, 210, 0.808);
+  margin: 0 0 .4rem 0;
+  text-align: start;
+}
+
+.sub-info-text .max-temp {
+/*     font-weight: 700; */
+  margin: 0 .5rem 0 -.1rem;
+}
+
+.selection-panel {
+  margin: 1.8rem 0 1.8rem -.6rem;
+}
+
+.selection-row {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: .2rem 0 0 0;
+  flex-direction: row;
+}
+
+.selection-days {
+  color: rgb(210, 210, 210, 0.808);
+  font-size: .7rem;
+  font-weight: 700;
+  width: 3.5rem;
+}
+
+.selection-weather {
+  color: rgba(210, 210, 210, 0.808);
+  font-size: .7rem;
+  width: 3.5rem;
+}
+
+.selection-icons {
+  color: rgba(210, 210, 210, 0.808);
+  font-size: 1.7rem;
+  width: 3.5rem;
+}
+
+.selected {
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.cloudy {
+  background-image: linear-gradient(0deg, #bbdefb99, #2195f3a2);
+}
+
+.clear {
+  background-image: linear-gradient(0deg, #b3e5fc96, #29b5f6a1);
+}
+
+.snow {
+  background-image: linear-gradient(0deg, #b2ebf297, #26c5daa1);
+}
+
+.rain {
+  background-image: linear-gradient(0deg, #c5cae994, #5c6bc0a4);
+}
+
+.thunderstorm {
+  background-image: linear-gradient(0deg, #e0e0e0a9, #7575759f);
 }

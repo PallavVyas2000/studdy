@@ -8,10 +8,13 @@ const TimeTable = () => {
           <h5 className="card-title" style={{textAlign : "center"}}>Class Schedule</h5>
         </div>
         <div className="card tt-items">
-          <ul>
-            <li>
-            </li>
-          </ul>
+          <tr className="timetable">
+            <td>
+              <p>Security in IOT (CSB-481)</p>
+              <p>Ashima Shahhi(E5705)</p>
+              <p>Theory</p>
+            </td>
+          </tr>
         </div>
       </div>
     </div>
